@@ -5,7 +5,7 @@ class ProductosController < ApplicationController
   def index
     @productos = Producto.all
 
-    render json: @productos.as_json(root: true, except: [:created_at, :updated_at])
+    render json: @productos
   end
 
   # GET /productos/1

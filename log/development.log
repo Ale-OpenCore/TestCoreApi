@@ -1,0 +1,388 @@
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "productos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "tipo" varchar, "imagen" varchar, "codigo" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170116194346"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-16 19:55:38 UTC], ["updated_at", 2017-01-16 19:55:38 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-01-16 16:57:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (7.0ms)
+Completed 200 OK in 77ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2017-01-16 16:57:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/productos" for ::1 at 2017-01-16 16:57:45 -0300
+  
+SyntaxError (C:/Opencore Movil/TestCoreApi/app/controllers/productos_controller.rb:49: syntax error, unexpected ',', expecting ')'
+...ire(:producto).permit(:nombre,, :tipo,, :imagen,, :codigo)
+...                               ^):
+  
+app/controllers/productos_controller.rb:49: syntax error, unexpected ',', expecting ')'
+Started GET "/productos" for ::1 at 2017-01-16 16:58:18 -0300
+Processing by ProductosController#index as HTML
+Started GET "/productos" for ::1 at 2017-01-16 16:58:28 -0300
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 1.0ms)
+
+
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "https://www.google.cl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjMqpOut8fRAhXQnJAKHbXhDKEQjRwIBw&url=http%3A%2F%2Fwww.santanderrio.com.ar%2Fbanco%2Fonline%2Fpymes-advance%2Fformacion-empresarial%2Fpildoras-de-conocimiento%2Fmarketing%2Fsabes-cual-es-la-naturaleza-de-tu-producto&psig=AFQjCNHVQFWhl9aVE5tr6XYDZ2I9WlK4NQ&ust=1484682470188381"], ["codigo", 1], ["created_at", 2017-01-16 19:59:26 UTC], ["updated_at", 2017-01-16 19:59:26 UTC]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/productos" for ::1 at 2017-01-16 16:59:36 -0300
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:00:28 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/productos.json" for ::1 at 2017-01-16 17:04:48 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:04:49 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/productos.json" for ::1 at 2017-01-16 17:05:28 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:05:29 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 9ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:05:30 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:46 UTC], ["updated_at", 2017-01-16 20:05:46 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:46 UTC], ["updated_at", 2017-01-16 20:05:46 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:46 UTC], ["updated_at", 2017-01-16 20:05:46 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:46 UTC], ["updated_at", 2017-01-16 20:05:46 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:46 UTC], ["updated_at", 2017-01-16 20:05:46 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:47 UTC], ["updated_at", 2017-01-16 20:05:47 UTC]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:47 UTC], ["updated_at", 2017-01-16 20:05:47 UTC]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:47 UTC], ["updated_at", 2017-01-16 20:05:47 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:47 UTC], ["updated_at", 2017-01-16 20:05:47 UTC]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:05:47 UTC], ["updated_at", 2017-01-16 20:05:47 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/productos.json" for ::1 at 2017-01-16 17:05:51 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProductos (20170116194346)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "productos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "tipo" varchar, "imagen" varchar, "codigo" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170116194346"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-16 20:09:05 UTC], ["updated_at", 2017-01-16 20:09:05 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "productos" ("nombre", "tipo", "imagen", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "item"], ["tipo", "Producto"], ["imagen", "C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg"], ["codigo", 1], ["created_at", 2017-01-16 20:09:16 UTC], ["updated_at", 2017-01-16 20:09:16 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/productos.json" for ::1 at 2017-01-16 17:09:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:34:56 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 28ms (Views: 4.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:35:38 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.5ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-16 17:35:41 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (0.5ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 12:38:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (21.0ms)
+Completed 200 OK in 426ms (Views: 238.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2017-01-19 12:38:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/productos" for ::1 at 2017-01-19 12:38:51 -0300
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (2.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 44ms (Views: 3.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 12:55:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+Completed 200 OK in 22ms (Views: 3.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 13:09:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+No serializer found for resource: {"id"=>1, "nombre"=>"item", "tipo"=>"Producto", "imagen"=>"C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg", "codigo"=>1, "created_at"=>Mon, 16 Jan 2017 20:09:16 UTC +00:00, "updated_at"=>Mon, 16 Jan 2017 20:09:16 UTC +00:00}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (3.0ms)
+Completed 200 OK in 38ms (Views: 21.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 13:11:36 -0300
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (2.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+No serializer found for resource: {"id"=>1, "nombre"=>"item", "tipo"=>"Producto", "imagen"=>"C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg", "codigo"=>1, "created_at"=>Mon, 16 Jan 2017 20:09:16 UTC +00:00, "updated_at"=>Mon, 16 Jan 2017 20:09:16 UTC +00:00}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (2.0ms)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 13:17:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+No serializer found for resource: {"producto"=>{"id"=>1, "nombre"=>"item", "tipo"=>"Producto", "imagen"=>"C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg", "codigo"=>1}}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.0ms)
+Completed 200 OK in 37ms (Views: 18.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 15:41:56 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (15.0ms)
+Completed 200 OK in 342ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2017-01-19 15:41:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/productos" for ::1 at 2017-01-19 15:42:02 -0300
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (2.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+No serializer found for resource: {"producto"=>{"id"=>1, "nombre"=>"item", "tipo"=>"Producto", "imagen"=>"C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg", "codigo"=>1}}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (1.0ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/productos.json" for ::1 at 2017-01-19 15:50:48 -0300
+Processing by ProductosController#index as JSON
+  [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+No serializer found for resource: {"producto"=>{"id"=>1, "nombre"=>"item", "tipo"=>"Producto", "imagen"=>"C:\\Users\\alexa\\Downloads\\robert-downey-jr-meme-eyes_thumb.jpg", "codigo"=>1}}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (1.02ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.0ms)
+
+

@@ -4,7 +4,7 @@ class ProductosController < ApplicationController
   # GET /productos
   def index
     @productos = Producto.all
-    render json: { productos: Producto.all,  adapter: :json_api }
+    render json: { productos: Producto.all,  adapter: :json_api }, :except=>  [:updated_at, :created_at]
   end
 
   # GET /productos/1

@@ -607,3 +607,40 @@ Processing by ProductosController#index as HTML
 Completed 200 OK in 57ms (Views: 42.3ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/productos" for ::1 at 2017-01-19 21:54:33 -0300
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (2.5ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (14.01ms)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 21:56:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (16.86ms)
+Completed 200 OK in 45ms (Views: 31.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 21:57:21 -0300
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (2.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (8.0ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 21:59:04 -0300
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (0.5ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (8.47ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 21:59:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (0.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (17.01ms)
+Completed 200 OK in 46ms (Views: 33.7ms | ActiveRecord: 3.0ms)
+
+

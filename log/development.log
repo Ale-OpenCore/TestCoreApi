@@ -644,3 +644,17 @@ Processing by ProductosController#index as HTML
 Completed 200 OK in 46ms (Views: 33.7ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/productos" for ::1 at 2017-01-19 22:06:21 -0300
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (1.0ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (17.01ms)
+Completed 200 OK in 54ms (Views: 34.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/productos" for ::1 at 2017-01-19 22:07:05 -0300
+Processing by ProductosController#index as HTML
+[active_model_serializers]   [1m[36mProducto Load (1.5ms)[0m  [1m[34mSELECT "productos".* FROM "productos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (18.51ms)
+Completed 200 OK in 53ms (Views: 31.2ms | ActiveRecord: 4.5ms)
+
+

@@ -9,7 +9,7 @@ class ProductosController < ApplicationController
 
   # GET /productos/1
   def show
-    render json: @producto.as_json(root: true, except: [:created_at, :updated_at])
+    render json: @producto
   end
 
   # POST /productos
@@ -17,7 +17,7 @@ class ProductosController < ApplicationController
     @producto = Producto.new(producto_params)
 
     if @producto.save
-      render json: @producto.as_json(root: true, except: [:created_at, :updated_at]), status: :created, location: @producto
+      render json: @producto, status: :created, location: @producto
     else
       render json: @producto.errors, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class ProductosController < ApplicationController
   # PATCH/PUT /productos/1
   def update
     if @producto.update(producto_params)
-      render json: @producto.as_json(root: true, except: [:created_at, :updated_at])
+      render json: @producto
     else
       render json: @producto.errors, status: :unprocessable_entity
     end

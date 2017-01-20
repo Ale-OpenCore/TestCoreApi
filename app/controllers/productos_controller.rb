@@ -4,8 +4,7 @@ class ProductosController < ApplicationController
   # GET /productos
   def index
     @productos = Producto.all
-
-    render json: @productos
+    render json: { productos: Producto.all,  adapter: :json_api }
   end
 
   # GET /productos/1
